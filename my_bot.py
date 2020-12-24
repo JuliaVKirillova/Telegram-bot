@@ -12,7 +12,7 @@ PRACTICUM_TOKEN = os.getenv('PRACTICUM_TOKEN')
 URL = os.getenv('URL')
 V = os.getenv('VK_API_VERSION')  
 ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
-
+id_1 = os.getenv('id_1')
 
 def get_user_status(user_id):
     params = {
@@ -37,7 +37,7 @@ def send_message(message):
 
 
 if __name__ == "__main__":
-    vk_id = input("Введите id друга ")
+    vk_id = id_1
     while True:
         status, name = get_user_status(vk_id)
         if status == 1:
